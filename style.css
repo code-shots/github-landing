@@ -38,10 +38,68 @@ nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 nav a {
 	margin-right: 15px;
+	transition: all 0.5s ease;
+	position: relative;
+	padding: 25px 5px;
+}
+
+/* TOOLTIP */
+.tooltip {
+	display: none;
+	height: 410px;
+	width: 200px;
+	background-color: #FFF;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 65px;
+	left: 25px;
+}
+
+.tooltip a {
+	display: flex;
+	flex: 1;
+	font-size: 12px;
+	padding: 0 0 0 10px;
+	align-items: center;
+	color: #000;
+	border-radius: 4px;
+	transition: none;
+	margin: 0;
+}
+
+.tooltip a:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.link-1:hover + .tooltip-1, .tooltip-1:hover, .link-5:hover + .tooltip-2, .tooltip-2:hover {
+	display: flex;
+}
+
+.tooltip-2 {
+	left: 330px;
+	height: 150px;
+}
+
+.tooltip:before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 3px;
+	transform: rotate(45deg);
+	background-color: #FFF;
+	position: absolute;
+	top: -5px;
+	left: 70px;
 }
 
 /* SEARCH */
